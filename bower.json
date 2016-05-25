@@ -1,0 +1,13 @@
+{
+  "name": "ops-bot",
+  "description": "",
+  "main": "index.js",
+  "authors": [
+    "Hannah Koske <hannah.koske@andela.com>"
+  ],
+  "license": "ISC",
+  "moduleType": [
+    "node"
+  ],
+  "homepage": ""
+}
