@@ -49,5 +49,8 @@
   },
   "engines": {
     "node": "4.2.4"
+  },
+  "devDependencies": {
+    "webpack": "^1.13.1"
   }
 }
