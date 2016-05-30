@@ -3,6 +3,7 @@ var webpack = require('webpack');
 var mainPath = path.resolve(__dirname, 'app', 'main.js');
 
 module.exports = {
+  devtool: 'eval-source-map',
   entry: {
     main: [mainPath]
   },
@@ -14,15 +15,19 @@ module.exports = {
   },
 
   module: {
-    preLoaders: [{test: /\.js$/, loader: 'eslint-loader', exclude: /node_modules/}],
+    preLoaders: [{
+      test: /\.jsx$/,
+      loader: 'eslint-loader',
+      exclude: /node_modules/
+    }],
     loaders: [{
       test: /\.jsx?$/,
       include: path.join(__dirname, 'app'),
-      loader: 'react-hot!babel-loader',
-      exclude: path.resolve(__dirname, 'node_modules');
+      loader: 'babel-loader',
+      exclude: path.resolve(__dirname, 'node_modules')
     }]
   },
   resolve: {
     extensions: ['', '.js', '.jsx']
   }
-}
+};

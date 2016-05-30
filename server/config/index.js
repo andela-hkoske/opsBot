@@ -1,3 +1,4 @@
+require('dotenv').load();
 module.exports = {
   slack_token: process.env.SLACK_TOKEN,
   port: process.env.PORT,

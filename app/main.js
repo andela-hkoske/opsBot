@@ -5,5 +5,7 @@ import App from './components/main';
 
 render((
   <Router history={browserHistory}>
-    <Route path='/' component={App} />
+    <Route path="/" component={App} >
+      <IndexRoute component={App} />
+    </Route>
   </Router>), document.getElementById('view'));

@@ -52,6 +52,8 @@ app.get('/*', function(req, res) {
 
 // Set port that server and app are listening to
 app.listen(config.port, function(err) {
+
+  console.log('config ', config);
   if (err) {
     console.log(err);
   } else {
